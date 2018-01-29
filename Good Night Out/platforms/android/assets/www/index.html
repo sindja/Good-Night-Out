@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: ms-appdata: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *"> -->
+    
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <title>Hello World</title>
+
+    <script type="text/javascript" src="http://cdn.socket.io/socket.io-1.0.3.js"></script>        
+    <script type="text/javascript" src="cordova.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body onload="draw();">
+    <div data-role="page" id="mainPage">
+
+        <div data-role="header">
+            <div id="prvi">        
+                <p>Unesite ime</p>
+                <input type="text" id="textSearch" name="textSearch">
+                  
+                <p>Unesite zeljeni radijus</p>               
+                <input type="text" id="radiusSearch" name="radiusSearch">
+                <div data-role="header">
+                   <select id="selectSearch" width="50%" float="left">
+                       <option value="kafana">Kafana</option>
+                       <option value="pab">Pab</option>
+                       <option value="diskoteka">Diskoteka</option>
+                       <option value="pivnica">Pivnica</option>
+                   </select>
+                   <input type="hidden" id="locLatInput" name="locLatInput" value="">
+                   <input type="hidden" id="locLngInput" name="locLngInput"  value="">
+                   <input type="button" id="btnSearch" value="Search" float="left" width="50%">
+                   
+               </div>
+               <a href="#myPopup" data-rel="popup" class="ui-btn ui-btn-inline ui-corner-all ui-icon-check ui-btn-icon-left">Dodaj lokaciju</a>
+                 </div> 
+               <div data-role="popup" id="myPopup" class="ui-content" style="min-width:250px;">
+                 <canvas id="canvas" width="150" height="150"></canvas>
+
+                  <div data-role="header">        
+                    Ime: <input type="text" id="locationInput"/>               
+                
+                 <div data-role="header">     
+                    Description: <input type="text" id="locDescription"/>
+                    Tip: <select id="locType">
+                    <option value="kafana">Kafana</option>
+                    <option value="pab">Pab</option>
+                    <option value="diskoteka">Diskoteka</option>
+                    <option value="pivnica">Pivnica</option>
+                </select>
+
+                <input type="submit" value="Add Location" id="btnAddLocationFromMap">
+                </div> 
+            </div>
+        </div>
+        <div id="mapContent" style="width: 400px; height: 300px;" role="main" class="ui-content"></div>
+    </div>
+    
+</div>
+
+<div data-role="content">
+    <div id="resultElement"></div>
+</div>
+<script type="text/javascript" src="js/location.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src='http://maps.google.com/maps/api/js?sensor=false&libraries=places'></script>
+<script type="text/javascript" src="js/map.js"></script>    
+<script type="text/javascript" src="js/canvas-draw.js"></script>  
+</body>
+</html>

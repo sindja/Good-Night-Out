@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="io.cordova.hellocordova" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <preference name="loglevel" value="DEBUG" />
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="Geolocation">
+        <param name="android-package" value="org.apache.cordova.geolocation.Geolocation" />
+    </feature>
+    <feature name="SecureStorage">
+        <param name="android-package" value="com.crypho.plugins.SecureStorage" />
+    </feature>
+    <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+    </feature>
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
+    <splash density="mdpi" src="platforms/android/res/splash/mdpi.png" />
+    <splash density="hdpi" src="platforms/android/res/splash/hdpi.png" />
+    <splash density="xhdpi" src="platforms/android/res/splash/xhdpi.png" />
+    <splash density="xxhdpi" src="platforms/android/res/splash/xxhdpi.png" />
+    <splash density="xxxhdpi" src="platforms/android/res/splash/xxxhdpi.png" />
+    <icon density="ldpi" src="platforms/android/res/icons/ldpi.png" />
+    <icon density="mdpi" src="platforms/android/res/icons/mdpi.png" />
+    <icon density="hdpi" src="platforms/android/res/icons/hdpi.png" />
+    <icon density="xhdpi" src="platforms/android/res/icons/xhdpi.png" />
+    <icon density="xxhdpi" src="platforms/android/res/icons/xxhdpi.png" />
+    <icon density="xxxhdpi" src="platforms/android/res/icons/xxxhdpi.png" />
+    <allow-intent href="market:*" />
+    <name>Good night out</name>
+    <description>
+        A sample Apache Cordova application that responds to the deviceready event.
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="1000" />
+    <icon src="res/icon.png" />
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+</widget>
